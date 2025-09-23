@@ -12,7 +12,6 @@ export default function SeachBar() {
                 placeholder="Search for a place..."
                 />
             </div>
-
             {/* Search Button */}
             <button className="px-5 py-2 bg-blue-500 hover:bg-blue-700 rounded-md w-full md:w-28 text-base focus:outline-none focus:ring">
                 Search
