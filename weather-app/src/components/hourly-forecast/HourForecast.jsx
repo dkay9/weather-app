@@ -9,6 +9,7 @@ import StormIcon from '../../assets/images/icon-storm.webp';
 import PartlyOvercastIcon from '../../assets/images/icon-partly-cloudy.webp';
 import OvercastIcon from '../../assets/images/icon-overcast.webp';
 import DrizzleIcon from '../../assets/images/icon-drizzle.webp';
+import UnitDropdown from '../UnitDropdown';
 
 export default function HourForecast({ hourly }) {
   if (!hourly || !hourly.time) return null;
@@ -30,9 +31,12 @@ export default function HourForecast({ hourly }) {
   };
 
   return (
-    <div className="mt-6 px-4">
-      <h3 className="text-lg font-semibold mb-3">Hourly Forecast</h3>
-      <div className="flex gap-3 overflow-x-auto">
+    <div className="mt-6 px-4 bg-neutral-700 rounded-xl p-4 shadow-md">
+      <div className="flex items-center justify-between mb-4 ">
+        <h3 className="text-lg font-semibold mb-3">Hourly Forecast</h3>
+        <UnitDropdown />
+      </div>
+      <div className="flex flex-col gap-3">
         {hourly.time.slice(0, hoursToShow).map((time, index) => {
           const temp = hourly.temperature_2m[index];
           const condition = hourly.weathercode ? hourly.weathercode[index] : 0;
