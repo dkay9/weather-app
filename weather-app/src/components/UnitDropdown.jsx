@@ -31,7 +31,7 @@ export default function UnitsDropdown() {
       {/* Main button that opens/closes the dropdown */}
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 rounded-md bg-gray-800 px-3 py-2 text-white hover:bg-gray-700"
+        className="flex items-center gap-1 rounded-md bg-neutral-600 px-3 py-2 text-white hover:bg-gray-700"
       >
         {/* Settings gear icon */}
         <Settings className="h-4 w-4" />

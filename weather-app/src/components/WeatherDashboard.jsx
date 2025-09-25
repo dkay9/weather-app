@@ -37,7 +37,7 @@ export default function WeatherDashboard({ lat, lon, city }) {
     timeIndex !== -1 ? weatherData.hourly.precipitation[timeIndex] : "—";
 
   return (
-    <div className="flex flex-row lg:w-full gap-4 items-center mt-6">
+    <div className="flex flex-row lg:w-full gap-4 justify-center items-center mt-6">
       <div>
         <CurrentWeather data={weatherData} city={city} />
 
