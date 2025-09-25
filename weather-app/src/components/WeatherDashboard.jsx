@@ -1,4 +1,4 @@
-// src/components/Weather.jsx
+// src/components/WeatherDashboard.jsx
 import React, { useEffect, useState } from "react";
 import CurrentWeather from "./CurrentWeather";
 import WeatherStats from "./weather-stats/WeatherStats";
@@ -13,7 +13,7 @@ export default function WeatherDashboard({ lat, lon, city }) {
 
     const fetchWeather = async () => {
       try {
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m,relativehumidity_2m,precipitation`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m,relativehumidity_2m,precipitation,weathercode`;
         const res = await fetch(url);
         const data = await res.json();
         setWeatherData(data);
@@ -37,8 +37,9 @@ export default function WeatherDashboard({ lat, lon, city }) {
     timeIndex !== -1 ? weatherData.hourly.precipitation[timeIndex] : "—";
 
   return (
-    <div className="space-y-6">
-      <CurrentWeather data={weatherData} city={city} />
+    <div className="flex flex-row lg:w-full gap-4 items-center mt-6">
+      <div>
+        <CurrentWeather data={weatherData} city={city} />
 
       <WeatherStats
         feelsLike={weatherData.current_weather.temperature}
@@ -48,7 +49,10 @@ export default function WeatherDashboard({ lat, lon, city }) {
       />
 
       <DailyForecast data={weatherData.daily} />
-      <HourlyForecast data={weatherData.hourly} />
+      </div>
+
+      {/* ✅ Fix: pass correct prop name */}
+      <HourlyForecast hourly={weatherData.hourly} />
     </div>
   );
 }
