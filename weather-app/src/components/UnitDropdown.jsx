@@ -31,7 +31,7 @@ export default function UnitsDropdown() {
       {/* Main button that opens/closes the dropdown */}
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 rounded-md bg-neutral-600 px-3 py-2 text-white hover:bg-gray-700"
+        className="flex items-center gap-1 rounded-md bg-neutral-600 px-3 py-2 text-white hover:bg-neutral-700"
       >
         {/* Settings gear icon */}
         <Settings className="h-4 w-4" />
@@ -44,12 +44,12 @@ export default function UnitsDropdown() {
 
       {/* Dropdown menu */}
       {open && (
-        <div className="absolute right-0 mt-2 w-56 rounded-lg bg-gray-900 text-white shadow-lg ring-1 ring-black/20">
+        <div className="absolute right-0 mt-2 w-56 rounded-lg bg-neutral-600 text-white shadow-lg ring-1 ring-black/20">
           <div className="py-2">
             {/* Switch between Metric <-> Imperial */}
             <button
               onClick={toggleSystem}
-              className="block w-full px-4 py-2 text-left hover:bg-gray-700"
+              className="block w-full px-4 py-2 text-left hover:bg-neutral-700"
             >
               {settings.system === "metric"
                 ? "Switch to Imperial"
