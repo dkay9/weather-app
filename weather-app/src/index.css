@@ -25,3 +25,18 @@
   font-weight: 100 900;
   font-style: normal;
 }
+
+/* CurrentWeather container background: mobile default, desktop override at md */
+.current-weather {
+  background-image: url('./assets/images/bg-today-small.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Desktop (md and up) */
+@media (min-width: 768px) {
+  .current-weather {
+    background-image: url('./assets/images/bg-today-large.svg');
+  }
+}

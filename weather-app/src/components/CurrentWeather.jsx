@@ -1,19 +1,26 @@
-// src/components/CurrentWeather/CurrentWeather.jsx
 import React from "react";
+import SunIcon from "../assets/images/icon-sunny.webp";
 
-const CurrentWeather = ({ city, date, temperature, icon }) => {
+const CurrentWeather = ({ city, temperature }) => {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
-      {/* Left section: City + Date */}
+    <div className="current-weather h-60 rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
+      {/* Left: city/date */}
       <div>
-        <h2 className="text-2xl font-bold">{city}</h2>
-        <p className="text-sm text-neutral-200">{date}</p>
+        <h2 className="text-4xl font-bold">{city}</h2>
+        <p className="text-sm text-neutral-200">{formattedDate}</p>
       </div>
 
-      {/* Right section: Icon + Temperature */}
+      {/* Right: icon + temp */}
       <div className="flex items-center gap-4 mt-4 md:mt-0">
-        <img src={icon} alt="Weather icon" className="w-16 h-16" />
-        <span className="text-5xl font-semibold">{temperature}°</span>
+        <img src={SunIcon} alt="Weather icon" className="w-28 h-28" />
+        <span className="text-7xl font-semibold">{Math.round(temperature)}°</span>
       </div>
     </div>
   );
