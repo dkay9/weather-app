@@ -31,7 +31,7 @@ export default function DailyForecast({ daily }) {
     return (
         <div className="mt-4 w-full">
             <h3 className="text-white mb-2">Daily forecast</h3>
-            <div className="flex flex-row justify-between gap-0">
+            <div className="grid grid-cols-3 gap-5 md:flex md:flex-row md:justify-between">
                 {daily.time.map((date, idx) => {
                     const max = daily.temperature_2m_max?.[idx] ?? "—";
                     const min = daily.temperature_2m_min?.[idx] ?? "—";
@@ -39,28 +39,30 @@ export default function DailyForecast({ daily }) {
                     const Icon = getWeatherIcon(code);   
 
                     const weekday = new Date(date).toLocaleDateString("en-US", {
-                        weekday: "short", // gives Mon, Tue, Wed
+                    weekday: "short", // Mon, Tue, Wed
                     });
 
                     return (
-                    <div key={date} className="p-2 bg-neutral-800 rounded text-white flex flex-col items-center">
+                    <div 
+                        key={date} 
+                        className="bg-neutral-800 rounded-lg text-white flex flex-col items-center justify-evenly w-28 h-36"
+                    >
                         <div className="text-sm">{weekday}</div>
                         {Icon && (
                         <img 
                             src={Icon} 
                             alt="weather icon" 
-                            className="w-8 h-8 my-1" 
+                            className="w-10 h-10 my-1" 
                         />
                         )}
-                        <div className="text-lg flex font-semibold">
+                        <div className="text-lg flex gap-6 justify-between">
                             <p>{Math.round(max)}°</p>
                             <p>{Math.round(min)}°</p>
                         </div>
                     </div>
-                    );
+                 );
                 })}
             </div>
-
         </div>
     );
 }
