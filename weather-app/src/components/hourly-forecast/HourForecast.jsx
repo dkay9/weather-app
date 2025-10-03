@@ -30,7 +30,7 @@ export default function HourForecast({ hourly }) {
   };
 
   return (
-    <div className="mt-6 px-4 w-1/5 bg-neutral-700 rounded-xl p-4 shadow-md">
+    <div className="mt-6 px-4 w-full lg:w-1/5 h-full bg-neutral-700 rounded-xl p-4 shadow-md">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold mb-3">Hourly Forecast</h3>
         <UnitDropdown />
