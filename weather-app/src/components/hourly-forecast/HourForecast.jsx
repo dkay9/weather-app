@@ -1,6 +1,5 @@
 import React from "react";
 import HourCard from "./HourCard";
-
 import FogIcon from '../../assets/images/icon-fog.webp';
 import RainIcon from '../../assets/images/icon-rain.webp';
 import SnowIcon from '../../assets/images/icon-snow.webp';

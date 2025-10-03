@@ -18,7 +18,7 @@ export default {
         },
       },
       fontFamily: {
-        // Make sure these fonts are actually loaded (e.g. import in src/index.css or add <link> to Google Fonts in index.html)
+        // Must match the @font-face / imported font names in src/index.css
         bricola: ['"Bricolage Grotesque"', 'sans-serif'],
         dmSans: ['"DM Sans"', 'sans-serif'],
       },

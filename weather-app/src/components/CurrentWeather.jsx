@@ -10,7 +10,7 @@ const CurrentWeather = ({ city, temperature }) => {
     year: "numeric",
   });
   return (
-    <div className="current-weather h-60 rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
+    <div className="current-weather h-60 w-full rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
       {/* Left: city/date */}
       <div>
         <h2 className="text-4xl font-bold">{city}</h2>

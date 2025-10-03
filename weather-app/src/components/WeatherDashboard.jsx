@@ -37,7 +37,7 @@ export default function WeatherDashboard({ lat, lon, city }) {
     timeIndex !== -1 ? weatherData.hourly.precipitation[timeIndex] : "—";
 
   return (
-    <div className="flex flex-col md:flex-row lg:w-full gap-4 justify-center items-center mt-6">
+    <div className="flex flex-col lg:flex-row lg:w-full gap-4 justify-center items-center mt-6">
       <div className="w-3/5">
         <CurrentWeather 
           city={city} 
@@ -51,7 +51,7 @@ export default function WeatherDashboard({ lat, lon, city }) {
           precipitation={precipitation}
         />
 
-        <DailyForecast data={weatherData.daily} />
+        <DailyForecast daily={weatherData.daily} />
       </div>
 
       {/* ✅ Fix: pass correct prop name */}
