@@ -8,7 +8,7 @@ export default function HourCard ({ time, temp, icon }){
         <img src={icon} alt="weather icon" className="w-8 h-8 mb-1" />
         <p className="text-xs text-white">{time}</p>
       </div>
-      <p className="text-sm font-semibold">{temp}°</p>
+      <p className="text-sm font-semibold">{Math.round(temp)}°</p>
     </div>
   );
 };
