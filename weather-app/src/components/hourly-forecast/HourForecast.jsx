@@ -9,6 +9,7 @@ import PartlyOvercastIcon from '../../assets/images/icon-partly-cloudy.webp';
 import OvercastIcon from '../../assets/images/icon-overcast.webp';
 import DrizzleIcon from '../../assets/images/icon-drizzle.webp';
 import UnitDropdown from '../UnitDropdown';
+import DaysDropdown from "./DaysDropdown";
 
 export default function HourForecast({ hourly }) {
   if (!hourly || !hourly.time) return null;
@@ -30,10 +31,10 @@ export default function HourForecast({ hourly }) {
   };
 
   return (
-    <div className="mt-6 px-4 w-full lg:w-1/5 h-full bg-neutral-700 rounded-xl p-4 shadow-md">
+    <div className="mt-6 lg:mt-0 w-full lg:w-[25%] bg-neutral-800 rounded-xl p-4 shadow-md self-stretch box-border">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold mb-3">Hourly Forecast</h3>
-        <UnitDropdown />
+        <DaysDropdown />
       </div>
       <div className="flex flex-col gap-3">
         {hourly.time.slice(0, hoursToShow).map((time, index) => {

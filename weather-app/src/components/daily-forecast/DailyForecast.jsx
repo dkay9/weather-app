@@ -45,7 +45,7 @@ export default function DailyForecast({ daily }) {
                     return (
                     <div 
                         key={date} 
-                        className="bg-neutral-800 rounded-lg text-white flex flex-col items-center justify-evenly w-28 h-36"
+                        className="bg-neutral-800 border border-neutral-700 rounded-lg text-white flex flex-col items-center justify-evenly w-28 h-36"
                     >
                         <div className="text-sm">{weekday}</div>
                         {Icon && (

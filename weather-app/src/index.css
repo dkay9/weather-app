@@ -37,3 +37,10 @@ body {
     background-image: url('./assets/images/bg-today-large.svg');
   }
 }
+
+/* Ensure html/body/#root are full-height and share the same background to avoid any white area appearing beneath your app on mobile */
+html, body, #root {
+  height: 100%;
+  /* Match your Tailwind neutral-900 background to avoid white gaps */
+  background-color: hsl(243, 96%, 9%);
+}

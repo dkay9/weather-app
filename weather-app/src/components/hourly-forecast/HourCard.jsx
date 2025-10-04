@@ -23,7 +23,7 @@ export default function HourCard ({ time, temp, icon }){
     console.warn("Invalid time format:", time);
   }
   return (
-    <div className="flex flex-row justify-between items-center bg-neutral-800 rounded-xl p-3 shadow w-full">
+    <div className="flex flex-row justify-between items-center bg-neutral-700 border border-neutral-600 rounded-xl p-3 w-full">
       <div className="flex flex-row items-center mr-4">
         <img src={icon} alt="weather icon" className="w-8 h-8 mb-1" />
         <p className="text-xs text-white">{hour}</p>
