@@ -44,3 +44,28 @@ html, body, #root {
   /* Match your Tailwind neutral-900 background to avoid white gaps */
   background-color: hsl(243, 96%, 9%);
 }
+
+/* Custom thin scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(38 38 38); /* neutral-800 */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(82 82 82); /* neutral-600 */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(115 115 115); /* neutral-500 */
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(82 82 82) rgb(38 38 38);
+}

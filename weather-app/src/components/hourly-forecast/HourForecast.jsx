@@ -14,7 +14,7 @@ import DaysDropdown from "./DaysDropdown";
 export default function HourForecast({ hourly }) {
   if (!hourly || !hourly.time) return null;
 
-  const hoursToShow = 6;
+  const hoursToShow = 24;
 
   // ✅ Weathercode → icon mapping
   const getWeatherIcon = (code) => {
@@ -31,12 +31,12 @@ export default function HourForecast({ hourly }) {
   };
 
   return (
-    <div className="mt-6 lg:mt-0 w-full lg:w-[25%] bg-neutral-800 rounded-xl p-4 shadow-md self-stretch box-border">
-      <div className="flex items-center justify-between mb-4">
+    <div className="mt-6 lg:mt-0 w-full lg:w-[25%] bg-neutral-800 rounded-xl p-4 shadow-md box-border flex flex-col">
+      <div className="flex items-center justify-between mb-4 flex-shrink-0">
         <h3 className="text-lg font-semibold mb-3">Hourly Forecast</h3>
         <DaysDropdown />
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 overflow-y-auto overflow-x-hidden pr-2 max-h-[455px] custom-scrollbar">
         {hourly.time.slice(0, hoursToShow).map((time, index) => {
           const temp = hourly.temperature_2m[index];
           const condition = hourly.weathercode ? hourly.weathercode[index] : 0;

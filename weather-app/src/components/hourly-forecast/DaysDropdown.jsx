@@ -37,13 +37,13 @@ export default function DaysDropdown() {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 mt-2 w-40 rounded-lg bg-neutral-600 text-white shadow-lg ring-1 ring-black/20">
+        <div className="absolute right-0 mt-2 w-44 rounded-lg bg-neutral-800 text-white shadow-lg ring-1 ring-white/20">
           <div className="py-2">
             {days.map((day) => (
               <button
                 key={day}
                 onClick={() => handleSelect(day)}
-                className={`flex w-full items-center justify-between px-4 py-2 hover:bg-neutral-700 ${
+                className={`flex w-full items-center justify-between px-4 py-2 hover:bg-neutral-600 ${
                   selectedDay === day ? "bg-neutral-700" : ""
                 }`}
               >
