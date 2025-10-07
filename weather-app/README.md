@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Screenshot
 
-![image alt]([./screenshot.png](https://github.com/dkay9/weather-app/blob/f5cd298365de62684db82003409f4393b1d67543/weather-app/src/assets/images/screenshot.png))
+![image alt]([./screenshot.png](https://github.com/dkay9/weather-app/blob/f5cd298365de62684db82003409f4393b1d67543/weather-app/src/assets/images/screenshot.png](https://github.com/dkay9/weather-app/blob/main/weather-app/src/assets/images/screenshot.png?raw=true)))
 
 ### Links
 
