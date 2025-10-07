@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![image alt]([./screenshot.png](https://github.com/dkay9/weather-app/blob/f5cd298365de62684db82003409f4393b1d67543/weather-app/src/assets/images/screenshot.png))
 
 ### Links
 
@@ -88,5 +88,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Website - [Kalu David](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@dkay9](https://www.frontendmentor.io/profile/dkay9)
 - Twitter - [@Dheekay11](https://www.twitter.com/Dheekay11)
