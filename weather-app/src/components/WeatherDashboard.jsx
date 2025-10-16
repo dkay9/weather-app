@@ -74,7 +74,7 @@ export default function WeatherDashboard({ lat, lon, city }) {
         <DailyForecast daily={weatherData.daily} />
       </div>
 
-      {/* ✅ Fix: pass correct prop name */}
+      {/* Fix: pass correct prop name */}
       <HourlyForecast hourly={weatherData.hourly} />
     </div>
   );
